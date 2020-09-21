@@ -47,6 +47,14 @@ Start JSON Server `json-server --watch db.json`
 
 Install the [Postman](https://www.postman.com/downloads/) app.
 
+## How to use Postman
+
+To get data use `GET`.
+
+To add data use `POST`.
+
+To change data use `PUT` with request URI.
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

@@ -1,5 +1,22 @@
 {
-  "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "Chicken Restaurant",
+      "address": "Chicken coop",
+      "email": "chicken@test.com"
+    },
+    {
+      "id": 2,
+      "name": "Fish Restaurant",
+      "address": "Water",
+      "email": "fish@test.com"
+    },
+    {
+      "id": 3,
+      "name": "Meat Restaurant",
+      "address": "Cattle hut",
+      "email": "meat@test.com"
+    }
   ]
 }

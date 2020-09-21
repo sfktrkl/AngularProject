@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+// Import service to get data from API
+import { RestaurantService } from '../restaurant.service'
+
 @Component({
   selector: 'app-list-restaurant',
   templateUrl: './list-restaurant.component.html',
@@ -7,9 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListRestaurantComponent implements OnInit {
 
-  constructor() { }
+  constructor(private restaurants: RestaurantService) { }
 
+  collection = {};
   ngOnInit(): void {
+    this.restaurants.getDataFromAPI().subscribe((data) => { this.collection = data; });
   }
 
 }

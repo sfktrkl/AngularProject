@@ -11,6 +11,9 @@ import { ListRestaurantComponent } from './list-restaurant/list-restaurant.compo
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 
+// Import HttpClientModule for RestaurantService
+import { HttpClientModule } from '@angular/common/http'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +25,8 @@ import { RegisterComponent } from './register/register.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

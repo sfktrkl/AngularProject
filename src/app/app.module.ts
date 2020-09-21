@@ -14,6 +14,9 @@ import { RegisterComponent } from './register/register.component';
 // Import HttpClientModule for RestaurantService
 import { HttpClientModule } from '@angular/common/http'
 
+// Import reactive form for restaurant forms
+import { ReactiveFormsModule } from '@angular/forms'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +29,8 @@ import { HttpClientModule } from '@angular/common/http'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

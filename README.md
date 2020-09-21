@@ -55,6 +55,10 @@ To add data use `POST`.
 
 To change data use `PUT` with request URI.
 
+## Install Bootstrap
+
+Install json server with `npm install --save bootstrap`
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

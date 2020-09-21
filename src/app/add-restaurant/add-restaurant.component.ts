@@ -3,6 +3,9 @@ import { Component, OnInit } from '@angular/core';
 // Import form group and form control to be able to create a form
 import { FormGroup, FormControl } from '@angular/forms'
 
+// Import RestaurantService to post to API
+import { RestaurantService } from '../restaurant.service'
+
 @Component({
   selector: 'app-add-restaurant',
   templateUrl: './add-restaurant.component.html',
@@ -10,7 +13,7 @@ import { FormGroup, FormControl } from '@angular/forms'
 })
 export class AddRestaurantComponent implements OnInit {
 
-  constructor() { }
+  constructor(private restaurants: RestaurantService) { }
 
   ngOnInit(): void {
   }
@@ -24,4 +27,7 @@ export class AddRestaurantComponent implements OnInit {
 
   // Create a method to be able to get values from form
   getFormValues() { console.warn(this.restaurantForm.value); }
+
+  // Create a method to post data to API using service
+  sendFormValues() { this.restaurants.setDataToAPI(this.restaurantForm.value).subscribe(); }
 }

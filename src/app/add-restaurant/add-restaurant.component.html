@@ -1,6 +1,6 @@
 <h1>Add Restaurant</h1>
 <!-- https://getbootstrap.com/docs/4.0/components/forms/ -->
-<form [formGroup]="restaurantForm" (ngSubmit)="getFormValues()">
+<form [formGroup]="restaurantForm" (ngSubmit)="getFormValues(); sendFormValues()">
   <div class="form-group">
     <label>Restaurant Name</label>
     <input type="text" class="form-control" formControlName="name" placeholder="Enter Name">

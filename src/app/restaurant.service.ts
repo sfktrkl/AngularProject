@@ -14,4 +14,9 @@ export class RestaurantService {
   getDataFromAPI() {
     return this.http.get("http://localhost:3000/restaurants");
   }
+
+  // Create a method to post given data
+  setDataToAPI(data) {
+    return this.http.post("http://localhost:3000/restaurants", data);
+  }
 }

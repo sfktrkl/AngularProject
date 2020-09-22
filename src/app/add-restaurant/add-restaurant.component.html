@@ -1,6 +1,13 @@
 <h1>Add Restaurant</h1>
+<!-- https://getbootstrap.com/docs/4.0/components/alerts/ -->
+<div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Success</strong> Data has been submitted successfully.
+  <button (click)="updateAlert(false)" type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
 <!-- https://getbootstrap.com/docs/4.0/components/forms/ -->
-<form [formGroup]="restaurantForm" (ngSubmit)="getFormValues(); sendFormValues()">
+<form [formGroup]="restaurantForm" (ngSubmit)="getFormValues(); sendFormValues(); updateAlert(true); resetForm()">
   <div class="form-group">
     <label>Restaurant Name</label>
     <input type="text" class="form-control" formControlName="name" placeholder="Enter Name">

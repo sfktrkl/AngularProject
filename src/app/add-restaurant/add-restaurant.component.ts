@@ -30,4 +30,13 @@ export class AddRestaurantComponent implements OnInit {
 
   // Create a method to post data to API using service
   sendFormValues() { this.restaurants.setDataToAPI(this.restaurantForm.value).subscribe(); }
+
+  // Use a boolean to show alert when data is submitted.
+  alert: boolean = false;
+
+  // Create a method to show/hide alert
+  updateAlert(isShown) { this.alert = isShown; }
+
+  // Create a method to reset form
+  resetForm() { this.restaurantForm.reset(); }
 }

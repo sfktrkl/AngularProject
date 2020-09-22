@@ -17,4 +17,11 @@ export class ListRestaurantComponent implements OnInit {
     this.restaurants.getDataFromAPI().subscribe((data) => { this.collection = data; });
   }
 
+  // Create a method to be able to delete a restaurant
+  deleteRestaurant(item) {
+    this.restaurants.deleteDataFromAPI(item).subscribe();
+    // Delete item from collection
+    delete this.collection[item - 1];
+  }
+
 }

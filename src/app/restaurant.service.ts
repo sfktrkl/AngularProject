@@ -19,4 +19,9 @@ export class RestaurantService {
   setDataToAPI(data) {
     return this.http.post("http://localhost:3000/restaurants", data);
   }
+
+  // Create a method to delete data from API
+  deleteDataFromAPI(id) {
+    return this.http.delete(`http://localhost:3000/restaurants/${id}`);
+  }
 }

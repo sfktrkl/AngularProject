@@ -25,17 +25,17 @@ const routes: Routes = [
     path: 'update/:id'
   },
   {
-    component: ListRestaurantComponent,
-    path:'list'
-  },
-  {
     component: LoginComponent,
     path:'login'
   },
   {
     component: RegisterComponent,
     path:'register'
-  }
+  },
+  {
+    component: ListRestaurantComponent,
+    path:''
+  },
 ];
 
 @NgModule({

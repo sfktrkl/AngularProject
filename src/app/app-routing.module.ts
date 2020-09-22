@@ -19,6 +19,12 @@ const routes: Routes = [
     path:'update'
   },
   {
+    component: UpdateRestaurantComponent,
+    // Use parameterized route to display a page shows a specific data.
+    // Id will used to fetch a specific data.
+    path: 'update/:id'
+  },
+  {
     component: ListRestaurantComponent,
     path:'list'
   },

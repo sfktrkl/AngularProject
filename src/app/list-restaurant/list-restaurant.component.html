@@ -17,7 +17,12 @@
       <td>{{item.value.email}}</td>
       <!--https://www.w3schools.com/icons/fontawesome_icons_intro.asp -->
       <!-- Use icon to crate a button to delete items. -->
-      <td><i (click)="deleteRestaurant(item.value.id)" class="fa fa-trash" style="font-size: 20px; color: red; cursor: pointer"></i></td>
+      <td>
+        <i (click)="deleteRestaurant(item.value.id)" class="fa fa-trash" style="font-size: 20px; color: red; cursor: pointer"></i>
+        <a routerLink="/update/{{item.value.id}}">
+          <i class="fa fa-edit" style="font-size: 20px; color: blue; cursor: pointer; padding: 0px 10px"></i>
+        </a>
+      </td>
     </tr>
   </tbody>
 </table>

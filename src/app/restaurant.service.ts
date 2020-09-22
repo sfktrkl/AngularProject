@@ -24,4 +24,13 @@ export class RestaurantService {
   deleteDataFromAPI(id) {
     return this.http.delete(`http://localhost:3000/restaurants/${id}`);
   }
+
+  // Create a method to fetch a specific data from API
+  getCurrentDataFromAPI(id) {
+    return this.http.get(`http://localhost:3000/restaurants/${id}`);
+  }
+
+  putDataToAPI(id, data) {
+    return this.http.put(`http://localhost:3000/restaurants/${id}`, data);
+  }
 }

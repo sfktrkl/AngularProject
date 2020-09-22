@@ -1,5 +1,5 @@
 <!--https://getbootstrap.com/docs/4.0/components/navbar/ -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light navbar-fixed">
   <a class="navbar-brand" routerLink="">Restaurants</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -13,6 +13,9 @@
     </div>
   </div>
 </nav>
-<div class="container">
+<div style="margin-bottom: 50px; margin-top: 50px" class="container">
   <router-outlet></router-outlet>
+  <footer style=" height: 40px; padding: 5px; background-color: aqua; position: fixed; left: 0; bottom: 0; width: 100%; text-align:center">
+    <p><a style="color: red" href="https://github.com/sfktrkl">Register your restaurant with us.</a></p>
+  </footer>
 </div>

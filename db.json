@@ -18,5 +18,17 @@
       "address": "Cattle hut",
       "email": "meat@test.com"
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "userId": "admin",
+      "password": "123456"
+    },
+    {
+      "userId": "Akanzi",
+      "password": "0312123",
+      "id": 2
+    }
   ]
 }

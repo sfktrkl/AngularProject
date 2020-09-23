@@ -33,4 +33,14 @@ export class RestaurantService {
   putDataToAPI(id, data) {
     return this.http.put(`http://localhost:3000/restaurants/${id}`, data);
   }
+
+  // Create a method to post user data to API
+  postUserDataToAPI(data) {
+    return this.http.post("http://localhost:3000/users", data);
+  }
+
+  // Create a method to fetch user data from API
+  getUserDataFromAPI() {
+    return this.http.get("http://localhost:3000/users");
+  }
 }

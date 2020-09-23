@@ -10,6 +10,9 @@ export class RestaurantService {
 
   constructor(private http: HttpClient) { }
 
+  // Store login information
+  loggedIn: boolean = false;
+
   // Create a method to get data from API
   getDataFromAPI() {
     return this.http.get("http://localhost:3000/restaurants");

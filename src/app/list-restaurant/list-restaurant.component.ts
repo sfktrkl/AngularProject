@@ -10,7 +10,7 @@ import { RestaurantService } from '../restaurant.service'
 })
 export class ListRestaurantComponent implements OnInit {
 
-  constructor(private restaurants: RestaurantService) { }
+  constructor(public restaurants: RestaurantService) { }
 
   collection = {};
   ngOnInit(): void {

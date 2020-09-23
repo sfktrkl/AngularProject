@@ -7,22 +7,26 @@ import { UpdateRestaurantComponent } from './update-restaurant/update-restaurant
 import { ListRestaurantComponent } from './list-restaurant/list-restaurant.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { AuthService } from './auth.service';
 
 // Add the routes
 const routes: Routes = [
   {
     component: AddRestaurantComponent,
-    path:'add'
+    path: 'add',
+    canActivate: [AuthService]
   },
   {
     component: UpdateRestaurantComponent,
-    path:'update'
+    path: 'update',
+    canActivate: [AuthService]
   },
   {
     component: UpdateRestaurantComponent,
     // Use parameterized route to display a page shows a specific data.
     // Id will used to fetch a specific data.
-    path: 'update/:id'
+    path: 'update/:id',
+    canActivate: [AuthService]
   },
   {
     component: LoginComponent,

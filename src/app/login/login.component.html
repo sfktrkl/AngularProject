@@ -19,7 +19,7 @@
   </button>
 </div>
 <!-- https://getbootstrap.com/docs/4.0/components/forms/ -->
-<form [formGroup]="loginForm" (ngSubmit)="updateAlert()">
+<form [formGroup]="loginForm" (ngSubmit)="updateAlert(); login()">
   <div class="form-group">
     <label>User ID</label>
     <input type="text" class="form-control" formControlName="userId" placeholder="Enter Name">

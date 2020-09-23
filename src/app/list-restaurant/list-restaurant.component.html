@@ -7,7 +7,7 @@
       <th scope="col">Name</th>
       <th scope="col">Address</th>
       <th scope="col">E-mail</th>
-      <th scope="col">Operations</th>
+      <th *ngIf="restaurants.loggedIn" scope="col">Operations</th>
     </tr>
   </thead>
   <tbody>
@@ -18,7 +18,7 @@
       <td>{{item.value.email}}</td>
       <!--https://www.w3schools.com/icons/fontawesome_icons_intro.asp -->
       <!-- Use icon to crate a button to delete items. -->
-      <td>
+      <td *ngIf="restaurants.loggedIn">
         <i (click)="deleteRestaurant(item.value.id)" class="fa fa-trash" style="font-size: 20px; color: red; cursor: pointer"></i>
         <a routerLink="/update/{{item.value.id}}">
           <i class="fa fa-edit" style="font-size: 20px; color: blue; cursor: pointer; padding: 0px 10px"></i>

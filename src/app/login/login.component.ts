@@ -67,4 +67,11 @@ export class LoginComponent implements OnInit {
   isUserValid() {
     return this.users.get(this.loginForm.controls['userId'].value) == this.loginForm.controls['password'].value;
   }
+
+  // Create a method to be able to set login property of service
+  login() {
+    if (this.isUserExist() && this.isUserValid()) {
+      this.restaurants.loggedIn = true;
+    }
+  }
 }
